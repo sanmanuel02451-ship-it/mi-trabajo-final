@@ -16,3 +16,16 @@ Respetar los límites climáticos: Cumplir estrictamente con el Acuerdo de Parí
 Cambiar el modelo de consumo: Rediseñar la producción industrial, reducir drásticamente los desechos y adoptar un consumo responsable en el día a día.
 
 Proteger la naturaleza: Detener por completo la deforestación y restaurar los bosques para que sigan limpiando el aire de forma natural.
+
+
+
+
+que use para crear mi proyecto:
+
+HTML5 puro
+
+CSS3 personalizado (sin Bootstrap ni frameworks)
+
+JavaScript vanilla (sin jQuery ni librerías)
+
+SVG como imágenes decorativas
