@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protección de la naturaleza</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content page-header">
+      <div class="hero-overview">
+        <div>
+          <h1>Protección de la naturaleza</h1>
+          <p>Cuidar bosques, océanos y biodiversidad protege al clima y mantiene los ciclos del planeta. Cada acción cuenta para un ecosistema más sano.</p>
+          <a class="action-button back-button" href="index.html">← Volver al inicio</a>
+        </div>
+        <img src="images/leaf-card.svg" alt="Hoja verde representando la naturaleza" />
+      </div>
+      <button id="helpButton" class="help-button" type="button">¿Cómo usar?</button>
+      <div id="helpPanel" class="help-panel hidden">
+        <h3>Guía de esta página</h3>
+        <p>Esta página te muestra cómo proteger la naturaleza para ayudar al clima a largo plazo.</p>
+        <ul>
+          <li><strong>Importancia:</strong> bosques y océanos como sumideros de carbono.</li>
+          <li><strong>Acciones:</strong> reforestación, conservación y limpieza de ecosistemas.</li>
+          <li><strong>Datos:</strong> por qué la biodiversidad es clave para la resiliencia climática.</li>
+        </ul>
+        <button id="closeHelpButton" type="button" class="secondary-button">Cerrar</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="page-section">
+      <div class="section-title"><span>🌳</span><h2>¿Qué está en juego?</h2></div>
+      <p>Los ecosistemas naturales absorben carbono, regulan el agua y protegen la vida. La pérdida de hábitats y la degradación de la biodiversidad empeoran el calentamiento global.</p>
+    </section>
+
+    <section class="page-section page-grid">
+      <article class="feature-card">
+        <h3>Reforestación y conservación</h3>
+        <p>Plantar árboles y cuidar bosques ayuda a capturar CO2 y protege suelos y especies vulnerables.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Protección de océanos</h3>
+        <p>Los océanos absorben carbono y sostienen biodiversidad. Protegerlos reduce contaminación y fortalece el clima.</p>
+      </article>
+    </section>
+
+    <section class="page-section page-grid">
+      <article class="image-card">
+        <img src="images/leaf-card.svg" alt="Naturaleza y hoja ecológica" />
+      </article>
+      <article class="feature-card">
+        <h3>Áreas protegidas</h3>
+        <p>Reservas naturales conservan especies y procesos ecológicos, aumentando la resiliencia climática.</p>
+      </article>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>🛡️</span><h2>Acciones prácticas</h2></div>
+      <ul>
+        <li>Participa en reforestación, limpieza de playas y protección de ríos.</li>
+        <li>Evita productos que dañen bosques y ecosistemas marinos.</li>
+        <li>Apoya proyectos de conservación con información confiable.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>📌</span><h2>Datos importantes</h2></div>
+      <ul>
+        <li>Los bosques absorben cerca del 30% de las emisiones humanas.</li>
+        <li>Más del 70% de las especies marinas dependen de hábitats costeros sanos.</li>
+        <li>Restaurar ecosistemas degradados es una estrategia clave para el clima.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Proteger la naturaleza es proteger el futuro del clima.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const button = document.getElementById('helpButton');
+      const panel = document.getElementById('helpPanel');
+      const closeButton = document.getElementById('closeHelpButton');
+      if (button && panel && closeButton) {
+        button.addEventListener('click', () => panel.classList.toggle('hidden'));
+        closeButton.addEventListener('click', () => panel.classList.add('hidden'));
+      }
+    });
+  </script>
+</body>
+</html>

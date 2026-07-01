@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energía renovable</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content page-header">
+      <div class="hero-overview">
+        <div>
+          <h1>Energía renovable</h1>
+          <p>La transición a fuentes limpias es esencial para reducir las emisiones globales de gases de efecto invernadero. Usa sol, viento y agua con estilo ecológico.</p>
+          <a class="action-button back-button" href="index.html">← Volver al inicio</a>
+        </div>
+        <img src="images/solar-panel.svg" alt="Panel solar ecológico" />
+      </div>
+      <button id="helpButton" class="help-button" type="button">¿Cómo usar?</button>
+      <div id="helpPanel" class="help-panel hidden">
+        <h3>Guía de esta página</h3>
+        <p>Aprende qué son las energías renovables, sus beneficios y cómo puedes sumarte a la transición.</p>
+        <ul>
+          <li><strong>Fuentes:</strong> solar, eólica, hidroeléctrica y redes inteligentes.</li>
+          <li><strong>Beneficios:</strong> menos emisiones y mejor calidad de aire.</li>
+          <li><strong>Cómo avanzar:</strong> instalar paneles, elegir energía verde y apoyar proyectos.</li>
+        </ul>
+        <button id="closeHelpButton" type="button" class="secondary-button">Cerrar</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="page-section">
+      <div class="section-title"><span>☀️</span><h2>¿Qué son las energías renovables?</h2></div>
+      <p>Son fuentes de energía que se renuevan naturalmente, como el sol, el viento, el agua y la biomasa. A diferencia de los combustibles fósiles, no agotan recursos finitos y generan menos emisiones.</p>
+    </section>
+
+    <section class="page-section page-grid">
+      <article class="feature-card">
+        <h3>Energía solar</h3>
+        <p>Los paneles solares convierten luz en electricidad sin emisiones directas. Son prácticos para hogares y empresas.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Energía eólica</h3>
+        <p>Los aerogeneradores producen electricidad con el viento. Son una pieza clave del mix energético moderno.</p>
+      </article>
+    </section>
+
+    <section class="page-section page-grid">
+      <article class="image-card">
+        <img src="images/solar-panel.svg" alt="Icono de energía solar" />
+      </article>
+      <article class="feature-card">
+        <h3>Hidroelectricidad y redes</h3>
+        <p>El agua en movimiento puede generar energía constante; las redes inteligentes optimizan su uso y reducen desperdicio.</p>
+      </article>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>🌬️</span><h2>Beneficios ambientales</h2></div>
+      <ul>
+        <li>Menos emisiones de CO2 y contaminantes atmosféricos.</li>
+        <li>Menor dependencia de combustibles importados.</li>
+        <li>Protección de la calidad del aire y del agua.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>⚡</span><h2>Cómo avanzar</h2></div>
+      <ul>
+        <li>Instala paneles solares si tienes espacio.</li>
+        <li>Apoya parques eólicos y pequeños proyectos hidráulicos.</li>
+        <li>Elige proveedores de energía verde cuando puedas.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>La energía renovable es la base de un futuro más fresco y más justo.</p>
+  </footer>  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const button = document.getElementById('helpButton');
+      const panel = document.getElementById('helpPanel');
+      const closeButton = document.getElementById('closeHelpButton');
+      if (button && panel && closeButton) {
+        button.addEventListener('click', () => panel.classList.toggle('hidden'));
+        closeButton.addEventListener('click', () => panel.classList.add('hidden'));
+      }
+    });
+  </script></body>
+</html>

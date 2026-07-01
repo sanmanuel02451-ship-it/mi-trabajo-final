@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consumo responsable</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content page-header">
+      <div class="hero-overview">
+        <div>
+          <h1>Consumo responsable</h1>
+          <p>Reducir, reutilizar y reciclar no solo protege el clima, también cuida recursos y disminuye el desperdicio. Usa menos y vive con más sentido ambiental.</p>
+          <a class="action-button back-button" href="index.html">← Volver al inicio</a>
+        </div>
+        <img src="images/recycle.svg" alt="Símbolo de reciclaje verde" />
+      </div>
+      <button id="helpButton" class="help-button" type="button">¿Cómo usar?</button>
+      <div id="helpPanel" class="help-panel hidden">
+        <h3>Guía de esta página</h3>
+        <p>Descubre cómo consumir de forma más responsable y reducir los residuos que afectan al clima.</p>
+        <ul>
+          <li><strong>Comprar mejor:</strong> productos duraderos, locales y con menos empaque.</li>
+          <li><strong>Reparar y reutilizar:</strong> evita desechar objetos que todavía pueden usarse.</li>
+          <li><strong>Circularidad:</strong> reciclar y reutilizar para mantener recursos en uso.</li>
+        </ul>
+        <button id="closeHelpButton" type="button" class="secondary-button">Cerrar</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="page-section">
+      <div class="section-title"><span>🛍️</span><h2>¿Por qué es importante?</h2></div>
+      <p>El consumo excesivo genera residuos y emisiones en cada etapa de vida de un producto. Un consumo más responsable protege el clima y apoya economías locales.</p>
+    </section>
+
+    <section class="page-section page-grid">
+      <article class="feature-card">
+        <h3>Comprar con criterio</h3>
+        <p>Elige productos duraderos, locales y de temporada. Menos transporte y menos producción intensiva significan menos emisiones.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Reparar y reutilizar</h3>
+        <p>Prolongar la vida útil de tus cosas evita que terminen en desechos y reduce la demanda de nuevos recursos.</p>
+      </article>
+    </section>
+
+    <section class="page-section page-grid">
+      <article class="image-card">
+        <img src="images/recycle.svg" alt="Reciclaje sostenible" />
+      </article>
+      <article class="feature-card">
+        <h3>Consumo circular</h3>
+        <p>Busca cero desperdicio: reusar materiales, reparar productos y reciclar adecuadamente para mantener recursos en uso.</p>
+      </article>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>✅</span><h2>Acciones fáciles</h2></div>
+      <ul>
+        <li>Compra solo lo necesario y evita compras impulsivas.</li>
+        <li>Repara ropa y electrodomésticos antes de reemplazarlos.</li>
+        <li>Apoya mercados locales y productos certificados.</li>
+        <li>Usa bolsas reutilizables, botellas y envases duraderos.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>📈</span><h2>Impacto real</h2></div>
+      <ul>
+        <li>El 40% de las emisiones globales proviene del ciclo de materiales y productos.</li>
+        <li>Reducir el desperdicio de alimentos baja significativamente tu huella de carbono.</li>
+        <li>Productos de mayor calidad pueden reducir el impacto total a largo plazo.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Tu elección de consumo puede ser una acción diaria a favor del clima.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const button = document.getElementById('helpButton');
+      const panel = document.getElementById('helpPanel');
+      const closeButton = document.getElementById('closeHelpButton');
+      if (button && panel && closeButton) {
+        button.addEventListener('click', () => panel.classList.toggle('hidden'));
+        closeButton.addEventListener('click', () => panel.classList.add('hidden'));
+      }
+    });
+  </script>
+</body>
+</html>

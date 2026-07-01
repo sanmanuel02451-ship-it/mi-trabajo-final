@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tips para el Calentamiento Global</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content page-header">
+      <div class="hero-overview">
+        <div>
+          <h1>Tips para usar estos métodos</h1>
+          <p>Consejos prácticos para aplicar movilidad, energía, consumo y protección de la naturaleza con más efectividad.</p>
+          <div class="tip-controls">
+            <button id="randomTipButton" type="button" class="action-button">Generar tip aleatorio</button>
+            <a class="action-button back-button" href="index.html">← Volver al inicio</a>
+          </div>
+          <button id="helpButton" class="help-button" type="button">¿Cómo usar?</button>
+          <div id="helpPanel" class="help-panel hidden">
+            <h3>Guía de esta página</h3>
+            <p>Presiona "Generar tip aleatorio" para recibir un consejo distinto cada vez. Esta página complementa los métodos de movilidad, energía, consumo y naturaleza.</p>
+            <ul>
+              <li>El botón superior abre y cierra esta guía de uso.</li>
+              <li>El tip se muestra abajo en el cuadro principal.</li>
+              <li>Regresa al inicio con el botón del lado izquierdo.</li>
+            </ul>
+            <button id="closeHelpButton" type="button" class="secondary-button">Cerrar</button>
+          </div>
+        </div>
+        <img src="images/hero-earth.svg" alt="Planeta con hojas y energía" />
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="page-section page-grid">
+      <article class="feature-card">
+        <h3>Planifica tus cambios</h3>
+        <p>Define metas semanales y enfócate en pequeños hábitos. Esto ayuda a establecer un camino sostenible sin abrumarte.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Combina soluciones</h3>
+        <p>Usa transporte sostenible, energía renovable y consumo consciente juntos para un mayor impacto.</p>
+      </article>
+    </section>
+
+    <section class="page-section page-grid">
+      <article class="feature-card">
+        <h3>Mide tu progreso</h3>
+        <p>Lleva un registro de tus acciones: cuántos viajes en bici, cuánto ahorras en energía o cuántos residuos evitas. Ver resultados motiva a seguir.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Aprende y comparte</h3>
+        <p>Comparte lo que aprendes con tu familia y amigos. Crear comunidad multiplica el efecto positivo en el clima.</p>
+      </article>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>🌱</span><h2>Tips por área</h2></div>
+      <div class="page-grid">
+        <article class="feature-card">
+          <h3>Movilidad</h3>
+          <p>Planifica rutas, combina bicicleta y transporte público, y evita viajes innecesarios en auto.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Energía</h3>
+          <p>Apaga luces y aparatos, usa energía renovable y considera paneles solares si puedes.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Consumo</h3>
+          <p>Compra menos, elige local, reutiliza y recicla antes de desechar.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Naturaleza</h3>
+          <p>Apoya iniciativas de conservación, planta árboles y evita productos dañinos para ecosistemas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>🎯</span><h2>Tip aleatorio</h2></div>
+      <div class="tip-display" id="tipDisplay">
+        Pulsa el botón para recibir un consejo nuevo y aleatorio sobre el clima.
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Los pequeños pasos suman y ayudan a cambiar el clima global.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tips = [
+        "Camina o usa bicicleta para trayectos cortos en lugar de usar el coche.",
+        "Apaga las luces y aparatos que no estés usando para ahorrar energía.",
+        "Compra alimentos locales y de temporada para reducir la huella de transporte.",
+        "Reutiliza bolsas, botellas y envases en lugar de usar desechables.",
+        "Participa en limpiezas de playas, ríos o parques locales.",
+        "Instala paneles solares si tienes posibilidad en tu hogar o edificio.",
+        "Apoya proveedores de energía verde cuando elijas tu servicio eléctrico.",
+        "Planta árboles o participa en proyectos de reforestación comunitaria.",
+        "Utiliza el transporte público y fomenta su uso entre tus amigos.",
+        "Repara ropa y electrodomésticos antes de reemplazarlos.",
+        "Reduce el consumo de carne y prueba platos más vegetales varias veces a la semana.",
+        "Usa la lavadora y el lavavajillas solo cuando estén llenos.",
+        "Cierra bien puertas y ventanas para no desperdiciar calefacción o aire acondicionado.",
+        "Compra productos con menos embalaje y evita el plástico innecesario.",
+        "Infórmate sobre biodiversidad y apoya proyectos de conservación.",
+        "Comparte tus aprendizajes y motiva a tu familia a cambiar hábitos.",
+        "Aprovecha la luz natural antes de encender las lámparas durante el día.",
+        "Usa programas de bajo consumo en tus electrodomésticos.",
+        "Reduce el desperdicio de alimentos planificando tus compras.",
+        "Recicla correctamente según las indicaciones de tu localidad.",
+        "Prefiere el tren o autobús en viajes largos en vez del coche o avión cuando puedas.",
+        "Apoya empresas sostenibles y responsables con el medio ambiente.",
+        "Instala un termostato eficiente y ajusta la temperatura unos grados.",
+        "Crea un huerto urbano o planta hierbas en macetas si tienes espacio.",
+        "Reutiliza papel y cartón antes de tirarlos al contenedor de reciclaje.",
+        "Evita comprar productos de un solo uso como cubiertos o platos plásticos.",
+        "Participa en iniciativas de compostaje para residuos orgánicos.",
+        "Fomenta el uso de vehículos eléctricos en tu comunidad si es posible.",
+        "Adopta un consumo más consciente leyendo etiquetas y símbolos ecológicos.",
+        "Apaga el agua mientras te cepillas los dientes para ahorrar litros diarios.",
+        "Comparte el coche con vecinos o compañeros cuando vayas a lugares comunes.",
+        "Usa ventilación natural en lugar de aire acondicionado cuando el clima lo permita.",
+        "Planta flores y plantas nativas para ayudar a polinizadores y biodiversidad.",
+        "Haz limpieza digital eliminando correos y archivos que no necesitas.",
+        "Reduce el uso de químicos de limpieza y busca alternativas ecológicas.",
+        "Involucra a los más jóvenes en acciones ambientales con actividades prácticas.",
+        "Haz una lista de productos que realmente necesitas antes de comprar.",
+        "Revisa y ajusta tu consumo eléctrico regularmente para identificar mejoras.",
+        "Apoya políticas locales de movilidad y energía sostenible con tu voto o firma.",
+        "Compra ropa de segunda mano o de marcas con prácticas sostenibles.",
+        "Evita productos con aceite de palma no certificado para proteger bosques.",
+        "Reduce el uso de aire acondicionado subiendo unos grados la temperatura.",
+        "Usa menos el secador, y seca tu ropa al aire libre cuando sea posible."
+      ];
+
+      const button = document.getElementById('randomTipButton');
+      const display = document.getElementById('tipDisplay');
+      const helpButton = document.getElementById('helpButton');
+      const helpPanel = document.getElementById('helpPanel');
+      const closeHelpButton = document.getElementById('closeHelpButton');
+      let remainingTips = [...tips].sort(() => Math.random() - 0.5);
+      let currentIndex = 0;
+
+      const showTip = () => {
+        if (currentIndex >= remainingTips.length) {
+          remainingTips = [...tips].sort(() => Math.random() - 0.5);
+          currentIndex = 0;
+        }
+        display.textContent = remainingTips[currentIndex];
+        currentIndex += 1;
+      };
+
+      if (button && display) {
+        button.addEventListener('click', showTip);
+      }
+
+      if (helpButton && helpPanel && closeHelpButton) {
+        helpButton.addEventListener('click', () => helpPanel.classList.toggle('hidden'));
+        closeHelpButton.addEventListener('click', () => helpPanel.classList.add('hidden'));
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soluciones para el Calentamiento Global</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-overview">
+        <div>
+          <h1>Soluciones para el Calentamiento Global</h1>
+          <p>Descubre formas reales de cuidar el clima, paso a paso, con colores e imágenes que representan un planeta más sano.</p>
+          <div class="button-grid">
+            <a class="action-button" href="movilidad.html">Movilidad sostenible</a>
+            <a class="action-button" href="energia.html">Energía renovable</a>
+            <a class="action-button" href="consumo.html">Consumo responsable</a>
+            <a class="action-button" href="naturaleza.html">Protección de la naturaleza</a>
+          </div>
+        </div>
+        <img src="images/hero-earth.svg" alt="Planeta tierra verde y azul" />
+      </div>
+      <div class="tips-card">
+        <p>¿Quieres más ideas? Explora consejos prácticos, métodos mixtos y acciones que puedes aplicar hoy.</p>
+        <a class="secondary-button action-button" href="tips.html">Ver tips</a>
+      </div>
+      <button id="helpButton" class="help-button" type="button">¿Cómo usar?</button>
+      <div id="helpPanel" class="help-panel hidden">
+        <h3>Guía rápida</h3>
+        <p>Esta página principal te permite seleccionar cada método y navegar a una explicación completa:</p>
+        <ul>
+          <li><strong>Movilidad sostenible</strong>: soluciones de transporte limpio.</li>
+          <li><strong>Energía renovable</strong>: ideas sobre sol, viento y agua.</li>
+          <li><strong>Consumo responsable</strong>: cómo reducir desechos y elegir mejor.</li>
+          <li><strong>Protección de la naturaleza</strong>: cuidar bosques, océanos y vida silvestre.</li>
+          <li><strong>Tips</strong>: recomienda consejos aleatorios cada vez que presionas el botón.</li>
+        </ul>
+        <button id="closeHelpButton" type="button" class="secondary-button">Cerrar</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="intro-section">
+      <div class="section-title"><span>🌿</span><h2>Cómo navegar</h2></div>
+      <p>Selecciona uno de los métodos para ver investigaciones completas, ideas y pasos prácticos. Cada página está organizada en secciones claras y coloridas.</p>
+      <div class="page-grid">
+        <article class="feature-card">
+          <h3>Movilidad verde</h3>
+          <p>Transporte público, bicicleta y caminos seguros para moverse sin contaminar.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Energía limpia</h3>
+          <p>Paneles solares, viento y agua como alternativas al carbón y el petróleo.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Consumo inteligente</h3>
+          <p>Compra menos, reutiliza, recicla y apoya productos locales.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Cuidado natural</h3>
+          <p>Reforestación, océanos sanos y conservación de hábitats.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>🌎</span><h2>El impacto ambiental</h2></div>
+      <p>Un diseño limpio y colores naturales ayudan a entender cómo cada acción protege nuestros bosques, océanos y aire.</p>
+      <ul>
+        <li>Apoyar la movilidad sostenible reduce emisiones y mejora ciudades.</li>
+        <li>La energía renovable protege el aire y reduce la dependencia de combustibles fósiles.</li>
+        <li>Consumir responsablemente disminuye residuos y protege recursos.</li>
+        <li>Cuidar la naturaleza mantiene el equilibrio entre clima y biodiversidad.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Juntos podemos hacer que el planeta sea más fresco, limpio y verde.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const button = document.getElementById('helpButton');
+      const panel = document.getElementById('helpPanel');
+      const closeButton = document.getElementById('closeHelpButton');
+      if (button && panel && closeButton) {
+        button.addEventListener('click', () => panel.classList.toggle('hidden'));
+        closeButton.addEventListener('click', () => panel.classList.add('hidden'));
+      }
+    });
+  </script>
+</body>
+</html>

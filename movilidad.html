@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movilidad sostenible</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content page-header">
+      <div class="hero-overview">
+        <div>
+          <h1>Movilidad sostenible</h1>
+          <p>Reducir el transporte contaminante es una de las formas más directas de combatir el calentamiento global. Elige modos limpios para moverte con menos emisiones.</p>
+          <a class="action-button back-button" href="index.html">← Volver al inicio</a>
+        </div>
+        <img src="images/bike-path.svg" alt="Bicicleta ecológica y camino verde" />
+      </div>
+      <button id="helpButton" class="help-button" type="button">¿Cómo usar?</button>
+      <div id="helpPanel" class="help-panel hidden">
+        <h3>Guía de esta página</h3>
+        <p>Encuentra ideas de movilidad sostenible, acciones concretas y datos relevantes sobre el transporte limpio.</p>
+        <ul>
+          <li><strong>Por qué importa:</strong> impacto climático del transporte.</li>
+          <li><strong>Ideas clave:</strong> transporte público, bicicleta, movilidad activa y eléctricos.</li>
+          <li><strong>Acciones concretas:</strong> pasos prácticos para aplicar hoy.</li>
+        </ul>
+        <button id="closeHelpButton" type="button" class="secondary-button">Cerrar</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="page-section">
+      <div class="section-title"><span>🚲</span><h2>¿Por qué importa?</h2></div>
+      <p>El transporte representa alrededor del 24% de las emisiones globales de gases de efecto invernadero. Cambiar a opciones más limpias reduce el dióxido de carbono y mejora la calidad del aire en ciudades y comunidades.</p>
+    </section>
+
+    <section class="page-section page-grid">
+      <article class="feature-card">
+        <h3>Transporte público y compartido</h3>
+        <p>Autobuses, trenes y vehículos compartidos reducen la huella por pasajero y ayudan a descongestionar calles.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Movilidad activa</h3>
+        <p>Caminar y usar bicicleta no solo evita emisiones, también mejora la salud y el espacio urbano.</p>
+      </article>
+    </section>
+
+    <section class="page-section page-grid">
+      <article class="feature-card">
+        <h3>Vehículos eléctricos</h3>
+        <p>Los autos eléctricos, cuando se cargan con energía limpia, reducen enormemente emisiones locales y son el futuro del transporte.</p>
+      </article>
+      <article class="image-card">
+        <img src="images/bike-path.svg" alt="Icono de movilidad en bicicleta" />
+      </article>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>📌</span><h2>Acciones concretas</h2></div>
+      <ul>
+        <li>Usa la bicicleta para trayectos cortos y evita el coche cuando puedas.</li>
+        <li>Organiza viajes compartidos al trabajo o a la escuela.</li>
+        <li>Explora el transporte público de tu ciudad y apóyalo.</li>
+        <li>Valora bicicletas eléctricas cuando el terreno o la distancia lo exijan.</li>
+      </ul>
+    </section>
+
+    <section class="page-section">
+      <div class="section-title"><span>📊</span><h2>Datos clave</h2></div>
+      <ul>
+        <li>Más del 70% de los trayectos urbanos son de menos de 5 km.</li>
+        <li>Un coche diésel puede emitir 120-180 g de CO2 por km.</li>
+        <li>Un viaje en autobús puede reducir emisiones hasta un 80% por persona.</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>La movilidad inteligente transforma la ciudad y el clima al mismo tiempo.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const button = document.getElementById('helpButton');
+      const panel = document.getElementById('helpPanel');
+      const closeButton = document.getElementById('closeHelpButton');
+      if (button && panel && closeButton) {
+        button.addEventListener('click', () => panel.classList.toggle('hidden'));
+        closeButton.addEventListener('click', () => panel.classList.add('hidden'));
+      }
+    });
+  </script>
+</body>
+</html>
